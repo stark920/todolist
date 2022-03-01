@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "13b11c4f-a184-4369-950a-434f5efececc",
+		"name": "Todolist-heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "取得所有待辦",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://shielded-castle-51922.herokuapp.com/todo",
+					"protocol": "https",
+					"host": [
+						"shielded-castle-51922",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增一筆待辦",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"測試資料3\"}"
+				},
+				"url": {
+					"raw": "https://shielded-castle-51922.herokuapp.com/todo",
+					"protocol": "https",
+					"host": [
+						"shielded-castle-51922",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯一筆待辦",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"12345\"}"
+				},
+				"url": {
+					"raw": "https://shielded-castle-51922.herokuapp.com/todo/12fa8c80-a149-49c2-b815-67b69f2115ba",
+					"protocol": "https",
+					"host": [
+						"shielded-castle-51922",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo",
+						"12fa8c80-a149-49c2-b815-67b69f2115ba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除一筆待辦",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://shielded-castle-51922.herokuapp.com/todo/12fa8c80-a149-49c2-b815-67b69f2115ba",
+					"protocol": "https",
+					"host": [
+						"shielded-castle-51922",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo",
+						"12fa8c80-a149-49c2-b815-67b69f2115ba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除全部待辦",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://shielded-castle-51922.herokuapp.com/todo",
+					"protocol": "https",
+					"host": [
+						"shielded-castle-51922",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "連線測試",
+			"request": {
+				"method": "OPTIONS",
+				"header": [],
+				"url": {
+					"raw": "https://shielded-castle-51922.herokuapp.com/todo",
+					"protocol": "https",
+					"host": [
+						"shielded-castle-51922",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
