@@ -6,7 +6,9 @@ const requestListener = (req, res) => {
     let body = '';
     req.on('data', chunk => { body += chunk });
 
-    if (req.url == '/todo') {
+    if (req.method == 'OPTIONS') {
+        sendRes(res, 200);
+    } else if (req.url == '/todo') {
         switch(req.method){
             case 'GET':
                 sendRes(res, 200, todo);

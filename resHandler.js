@@ -15,10 +15,12 @@ const errorCodes = {
 
 const sendRes = (res, status, data) => {
     res.writeHead(status, headers);
-    res.write(JSON.stringify({
-        'status': 'success',
-        'data': data
-    }));
+    if (data) {
+        res.write(JSON.stringify({
+            'status': 'success',
+            'data': data
+        }));
+    }
     res.end();
 };
 
