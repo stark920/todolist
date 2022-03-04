@@ -46,7 +46,7 @@ const requestListener = (req, res) => {
                 try {
                     let title = JSON.parse(body)?.title;
                     if (title) {
-                        todo[index].title = title,
+                        todo[index].title = title;
                         sendRes(res, 200, todo);
                     } else {
                         sendErrMsg(res, 400);
